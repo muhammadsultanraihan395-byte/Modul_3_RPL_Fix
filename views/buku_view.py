@@ -31,8 +31,16 @@ class BukuView(ctk.CTk):
         self.entry_tahun.pack(pady=10, padx=15, fill="x")
         
         # Tombol Aksi
-        self.btn_simpan = ctk.CTkButton(self.frame_kiri, text="Simpan Data", fg_color="green")
-        self.btn_simpan.pack(pady=20, padx=15, fill="x")
+        self.btn_simpan = ctk.CTkButton(self.frame_kiri, text="Simpan Data", fg_color="green", hover_color="darkgreen")
+        self.btn_simpan.pack(pady=10, padx=15, fill="x")
+        
+        # --- TAMBAHAN TOMBOL SESUAI TUGAS ASDOS ---
+        self.btn_update = ctk.CTkButton(self.frame_kiri, text="Perbarui Data (Update)", fg_color="blue", hover_color="darkblue")
+        self.btn_update.pack(pady=5, padx=15, fill="x")
+        
+        self.btn_delete = ctk.CTkButton(self.frame_kiri, text="Hapus Data (Delete)", fg_color="red", hover_color="darkred")
+        self.btn_delete.pack(pady=5, padx=15, fill="x")
+        # ------------------------------------------
         
         # ===================================
         # FRAME KANAN: TABEL DAFTAR BUKU
@@ -59,6 +67,7 @@ class BukuView(ctk.CTk):
         self.tabel.column("tahun", width=80, anchor="center")
         
         self.tabel.pack(fill="both", expand=True, padx=15, pady=10)
+        
 
 # Blok eksekusi untuk menguji tampilan grafis
 if __name__ == "__main__":
