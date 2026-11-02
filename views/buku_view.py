@@ -118,7 +118,8 @@ class BukuView(ctk.CTk):
     def logout(self):
         if self.on_logout:
             self.on_logout()
-        self.destroy()
+        else:
+            self.destroy()
 
 
 if __name__ == "__main__":
