@@ -1,5 +1,7 @@
+
 import mysql.connector
 from mysql.connector import Error
+
 
 class Database:
     def __init__(self):
@@ -15,11 +17,15 @@ class Database:
                 host=self.host,
                 database=self.db_name,
                 user=self.username,
-                password=self.password
+                password=self.password,
+                use_pure=True
             )
+
             if self.conn.is_connected():
+                print("DATABASE:", self.db_name)
+                print("KONEKSI:", self.conn.is_connected())
                 return self.conn
+
         except Error as e:
             print(f"Koneksi Gagal: {e}")
             return None
-            

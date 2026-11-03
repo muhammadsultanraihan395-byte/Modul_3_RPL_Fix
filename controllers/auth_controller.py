@@ -1,4 +1,3 @@
-
 import tkinter.messagebox as messagebox
 
 from models.user_model import UserModel
